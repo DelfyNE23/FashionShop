@@ -1,0 +1,151 @@
+"format_version": 1,
+    "imports": [
+        {
+            "target_table": "Fashion_Items",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Fashion_Items.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ","
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                    "ID",
+                    "FASHION_TYPE_ID",
+                    "ITEMNAME",
+                    "BRAND",
+                    "SIZE",
+                    "MATERIAL",
+                    "PRICE",
+                    "CURRENCY",
+                    "ISAVAILABLE"
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+                "ID": 1,
+                "FASHION_TYPE_ID": 2,
+                "ITEMNAME": 3,
+                "BRAND": 4,
+                "SIZE": 5,
+                "MATERIAL": 6,
+                "PRICE": 7,
+                "CURRENCY": 8,
+                "ISAVAILABLE": 9
+            }
+        },
+        {
+            "target_table": "Fashion_Types",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Fashion_Types.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ","
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                   "ID",
+                   "SECTION_ID",
+                   "TYPENAME",
+                   "DESCRIPTION"
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+                "ID": 1,
+                "SECTION_ID": 2,
+                "TYPENAME": 3,
+                "DESCRIPTION": 4
+            }
+        },
+        {
+            "target_table": "Sections",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Sections.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ","
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                    "ID",
+                    "NAME",
+                    "DESCRIPTION"
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+                "ID": 1,
+                "NAME": 2,
+                "DESCRIPTION": 3
+            }
+        },
+        {
+            "target_table": "Currency",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Currency.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ","
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                    "NAME",
+                    "DESCR",
+                    "CODE",
+                    "SYMBOL",
+                    "MINORUNIT"
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+               "NAME": 1,
+               "DESCR": 2,
+               "CODE": 3,
+               "SYMBOL": 4,
+               "MINORUNIT": 5
+            }
+        },
+        {
+            "target_table": "Currency_Text",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Currency_Text.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ","
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                    "LOCALE",
+                    "NAME",
+                    "DESCR",
+                    "CODE"
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+               "LOCALE": 1,
+               "NAME": 2,
+               "DESCR": 3,
+               "CODE": 4
+            }
+        }
+
+
+
+    ]
